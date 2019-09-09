@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FlyInForm</title>
+        
+    </head>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+       
+    <script type="text/javascript" src="./FlyIn.js"></script> 
+    <style>
+            form {
+                max-width: 900px;
+                display: block;
+                margin: 0 auto;
+              }
+    </style>
+<body>
+
+<div class="form">
+    <form data-abide name="form1" method="post" action="https://wmsforms.aws.stthomas.edu/process/processMultipart.jsp" enctype="multipart/form-data" onsubmit="document.getElementById('busyImage').style.display=''">
+        <input type="hidden" name="formid" value="3529">
+        <div class="row">
+            <div class="large-12 columns">
+                <label for="FirstName"><strong>First Name</strong></label>
+            </div>
+            <div class="large-12 columns">
+                <input type="text" name="FirstName" id="FirstName" placeholder="First Name"/ required tabindex="1"/>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="large-12 columns">
+                <label for="LastName"><strong>Last Name</strong></label>
+            </div>
+            <div class="large-12 columns">
+                <input type="text" name="LastName" id="LastName" placeholder="Last Name" required/ tabindex="2"/>
+            </div>
+        </div>
+            
+        <div class="row">
+            <div class="large-12 columns">
+                <label for="DateOfBirth"><strong>DOB</strong></label>
+            </div>
+            <div class="large-12 columns">
+                <input type="text" name="DateOfBirth" id="DateOfBirth" placeholder="Date Of Birth" tabindex="3"/>
+            </div>
+        </div>
+         
+        <div class="row">
+            <div class="large-12 columns">
+                <label for="phoneNumber"><strong>Phone Number</strong></label>
+            </div>
+            <div class="large-12 columns">
+                <input type="text" name="PhoneNumber" id="PhoneNumber" tabindex="4" placeholder="Phone Number">
+                    <small class="error">Home Phone Number must be a valid number</small>
+            </div>
+        </div>
+            
+        <div class="row">
+            <div class="large-12 columns">
+                <label for="Address"><strong>Street Address</strong></label>
+            </div>
+            <div class="large-12 columns">
+                <input type="text" name="Address" id="Address" placeholder="Street Address" tabindex="5" >
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="columns large-5">
+                <label for="City">City</label>
+                    <input type="text" name="City" id="City"  tabindex="5">
+            </div>
+            <div class="columns large-3">
+                <select name="State" id="State" tabindex="8">
+                    <option value="">State</option>
+                    <option value="AL">AL</option>
+                    <option value="AK">AK</option>
+                    <option value="AZ">AZ</option>
+                    <option value="AR">AR</option>
+                    <option value="CA">CA</option>
+                    <option value="CO">CO</option>
+                    <option value="CT">CT</option>
+                    <option value="DE">DE</option>
+                    <option value="DC">DC</option>
+                    <option value="FL">FL</option>
+                    <option value="GA">GA</option>
+                    <option value="HI">HI</option>
+                    <option value="IA">IA</option>
+                    <option value="ID">ID</option>
+                    <option value="IL">IL</option>
+                    <option value="IN">IN</option>
+                    <option value="KS">KS</option>
+                    <option value="KY">KY</option>
+                    <option value="LA">LA</option>
+                    <option value="MA">MA</option>
+                    <option value="MD">MD</option>
+                    <option value="ME">ME</option>
+                    <option value="MN">MN</option>
+                    <option value="MI">MI</option>
+                    <option value="MO">MO</option>
+                    <option value="MS">MS</option>
+                    <option value="MT">MT</option>
+                    <option value="NC">NC</option>
+                    <option value="ND">ND</option>
+                    <option value="NE">NE</option>
+                    <option value="NH">NH</option>
+                    <option value="NJ">NJ</option>
+                    <option value="NM">NM</option>
+                    <option value="NV">NV</option>
+                    <option value="NY">NY</option>
+                    <option value="OK">OK</option>
+                    <option value="OR">OR</option>
+                    <option value="OH">OH</option>
+                    <option value="PA">PA</option>
+                    <option value="RI">RI</option>
+                    <option value="SC">SC</option>
+                    <option value="SD">SD</option>
+                    <option value="TN">TN</option>
+                    <option value="TX">TX</option>
+                    <option value="UT">UT</option>
+                    <option value="VA">VA</option>
+                    <option value="VT">VT</option>
+                    <option value="WA">WA</option>
+                    <option value="WI">WI</option>
+                    <option value="WV">WV</option>
+                    <option value="WY">WY</option>
+                </select>
+            </div>
+            <div class="columns large-4">
+                <label for="ZipCode">ZipCode</label>
+                    <input type="text" name="ZipCode" id="ZipCode" tabindex="8" >
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="large-12 columns">
+            <label for="StudentType"><strong>Student Type</strong></label>
+            </div>
+            <div class="large-12 columns">
+                <select name="StudentType" id="StudentType" required tabindex="3">
+                    <option value="">Student Type</option>
+                        <option value="Freshman">Freshman</option>
+                    <option value="Transfer">Transfer</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="large-12 columns">
+            <label for="EventType">Which event are you planning to attend?</label>
+            </div>
+            <div class="large-12 columns">
+                <select name="EventType" id="EventType"  tabindex="10">
+                    <option value="">Which event are you planning to attend?</option>
+                        <option value="Offered Monday-Friday: Personalized Visit">Offered Monday-Friday: Personalized Visit</option>
+                            <option value=" December 8-9, 2019: Tommie Overnight Special Invitation"> December 8-9, 2019: Tommie Overnight Special Invitation</option>
+                                <option value=" January 25, 2020: Science, Math and Engineering Scholarship Day"> January 25, 2020: Science, Math and Engineering Scholarship Day</option>
+                                    <option value=" February 14-15, 2020: Admitted Tommie Experience"> February 14-15, 2020: Admitted Tommie Experience</option>
+                                <option value=" February 14-15, 2020: OCB Business Scholarship Day"> February 14-15, 2020: OCB Business Scholarship Day</option>
+                            <option value=" March 5, 2020 : Residence Life Event"> March 5, 2020 : Residence Life Event</option>
+                        <option value=" March 13-14, 2020: Admitted Tommie Experience"> March 13-14, 2020: Admitted Tommie Experience</option>
+                    <option value=" April 17-18, 2020: Admitted Tommie Experience"> April 17-18, 2020: Admitted Tommie Experience</option>
+                </select>
+                <small class="error"></small>
+            </div>
+        </div>
+        
+        <div class="row" style="display:none;" id='visitDateWrapper'>
+            <div class="large-12 columns">
+                <label for="VisitDate"><strong>Visit Date</strong></label>
+            </div>
+            <div class="large-12 columns">
+                <input type="text" name="VisitDate" id="VisitDate" placeholder="Visit Date"/ tabindex="5"/>
+            </div>
+        </div>
+
+        <div class="row">  
+            <div class="large-12 columns">
+                <label for="Email"><strong>Email</strong></label>
+            </div>
+            <div class="large-12 columns">
+                <input type="text" name="Email" id="Email" placeholder="Email" required tabindex="/6"/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="large-12 columns">
+                <label style="position:static;margin-bottom:1rem;padding-left:35px;line-height:1.5;">
+            <input style="top:2px;" type="checkbox" name="submitAgreement" class="radio" i/d="submitAgreement" value="true" required tabindex="7"/>By submitting this request, I understand I am applying for a fly-in voucher and I will receive a response from the Office of Admission within two weeks.</label>
+            </div>
+        </div>
+        
+        <input type="hidden" name="s8Echen9" value="">
+        <input class="button" type="submit" name="submitForm" value="Submit" tabindex="8"/>
+    </form>
+</body>
+</html>
