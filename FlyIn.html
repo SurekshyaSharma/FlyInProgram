@@ -8,73 +8,52 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
        
     <script type="text/javascript" src="./FlyIn.js"></script> 
     <style>
-            form {
+            .container {
                 max-width: 900px;
                 display: block;
                 margin: 0 auto;
               }
+          
     </style>
 <body>
-
-<div class="form">
+<div class="container">
+    <h1>Fly-In Program</h1>
+<div class="form-group">
     <form data-abide name="form1" method="post" action="https://wmsforms.aws.stthomas.edu/process/processMultipart.jsp" enctype="multipart/form-data" onsubmit="document.getElementById('busyImage').style.display=''">
-        <input type="hidden" name="formid" value="3529">
-        <div class="row">
-            <div class="large-12 columns">
+        <input class="form-control" type="hidden" name="formid" value="3529">
+        <div class="form-group">
                 <label for="FirstName"><strong>First Name</strong></label>
-            </div>
-            <div class="large-12 columns">
                 <input type="text" name="FirstName" id="FirstName" placeholder="First Name"/ required tabindex="1"/>
-            </div>
         </div>
         
-        <div class="row">
-            <div class="large-12 columns">
+        <div class="form-group">
                 <label for="LastName"><strong>Last Name</strong></label>
-            </div>
-            <div class="large-12 columns">
                 <input type="text" name="LastName" id="LastName" placeholder="Last Name" required/ tabindex="2"/>
-            </div>
         </div>
             
-        <div class="row">
-            <div class="large-12 columns">
+        <div class="form-group">
                 <label for="DateOfBirth"><strong>DOB</strong></label>
-            </div>
-            <div class="large-12 columns">
                 <input type="text" name="DateOfBirth" id="DateOfBirth" placeholder="Date Of Birth" tabindex="3"/>
-            </div>
         </div>
          
-        <div class="row">
-            <div class="large-12 columns">
+        <div class="form-group">
                 <label for="phoneNumber"><strong>Phone Number</strong></label>
-            </div>
-            <div class="large-12 columns">
                 <input type="text" name="PhoneNumber" id="PhoneNumber" tabindex="4" placeholder="Phone Number">
-                    <small class="error">Home Phone Number must be a valid number</small>
-            </div>
         </div>
             
-        <div class="row">
-            <div class="large-12 columns">
+        <div class="form-group">
                 <label for="Address"><strong>Street Address</strong></label>
-            </div>
-            <div class="large-12 columns">
                 <input type="text" name="Address" id="Address" placeholder="Street Address" tabindex="5" >
-            </div>
         </div>
         
 
-        <div class="row">
-            <div class="columns large-5">
+        <div class="form-group">
                 <label for="City">City</label>
                     <input type="text" name="City" id="City"  tabindex="5">
-            </div>
-            <div class="columns large-3">
                 <select name="State" id="State" tabindex="8">
                     <option value="">State</option>
                     <option value="AL">AL</option>
@@ -129,32 +108,23 @@
                     <option value="WV">WV</option>
                     <option value="WY">WY</option>
                 </select>
-            </div>
-            <div class="columns large-4">
+
                 <label for="ZipCode">ZipCode</label>
                     <input type="text" name="ZipCode" id="ZipCode" tabindex="8" >
-            </div>
         </div>
 
 
-        <div class="row">
-            <div class="large-12 columns">
+        <div class="form-group">
             <label for="StudentType"><strong>Student Type</strong></label>
-            </div>
-            <div class="large-12 columns">
                 <select name="StudentType" id="StudentType" required tabindex="3">
                     <option value="">Student Type</option>
                         <option value="Freshman">Freshman</option>
                     <option value="Transfer">Transfer</option>
                 </select>
-            </div>
         </div>
         
-        <div class="row">
-            <div class="large-12 columns">
+        <div class="form-group">
             <label for="EventType">Which event are you planning to attend?</label>
-            </div>
-            <div class="large-12 columns">
                 <select name="EventType" id="EventType"  tabindex="10">
                     <option value="">Which event are you planning to attend?</option>
                         <option value="Offered Monday-Friday: Personalized Visit">Offered Monday-Friday: Personalized Visit</option>
@@ -167,36 +137,25 @@
                     <option value=" April 17-18, 2020: Admitted Tommie Experience"> April 17-18, 2020: Admitted Tommie Experience</option>
                 </select>
                 <small class="error"></small>
-            </div>
         </div>
         
-        <div class="row" style="display:none;" id='visitDateWrapper'>
-            <div class="large-12 columns">
+        <div class="form-group"style="display:none;" id='visitDateWrapper'>
                 <label for="VisitDate"><strong>Visit Date</strong></label>
-            </div>
-            <div class="large-12 columns">
                 <input type="text" name="VisitDate" id="VisitDate" placeholder="Visit Date"/ tabindex="5"/>
-            </div>
         </div>
 
-        <div class="row">  
-            <div class="large-12 columns">
+        <div class="form-group">  
                 <label for="Email"><strong>Email</strong></label>
-            </div>
-            <div class="large-12 columns">
                 <input type="text" name="Email" id="Email" placeholder="Email" required tabindex="/6"/>
-            </div>
         </div>
 
-        <div class="row">
-            <div class="large-12 columns">
-                <label style="position:static;margin-bottom:1rem;padding-left:35px;line-height:1.5;">
-            <input style="top:2px;" type="checkbox" name="submitAgreement" class="radio" i/d="submitAgreement" value="true" required tabindex="7"/>By submitting this request, I understand I am applying for a fly-in voucher and I will receive a response from the Office of Admission within two weeks.</label>
+        <div class="checkbox">
+                <label><input type="checkbox" value="">By submitting this request, I understand I am applying for a fly-in voucher and I will receive a response from the Office of Admission within two weeks.</label>
             </div>
-        </div>
         
         <input type="hidden" name="s8Echen9" value="">
-        <input class="button" type="submit" name="submitForm" value="Submit" tabindex="8"/>
+        <input class="btn btn-default" type="submit" name="submitForm" value="Submit" tabindex="8"/>
     </form>
+</div>
 </body>
 </html>
